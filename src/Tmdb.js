@@ -22,6 +22,13 @@ const Tmdb = {
   getHomeList: async () => {
     return [
       {
+        slug: "originals",
+        title: "Netflix Originals",
+        items: await basicFetch(
+          `/discover/tv?with_network=213?language=en-US&api_key=${API_KEY}`
+        ),
+      },
+      {
         slug: "trending",
         title: "People are talking about",
         items: await basicFetch(
@@ -72,6 +79,27 @@ const Tmdb = {
       },
     ];
   },
+
+  getMovieInfo: async (movieId, type) => {
+    let movieInfo = {};
+    if (type === "movie") {
+      movieInfo = await basicFetch(
+        `/movie/${movieId}?language=en-US&api_key=${API_KEY}`
+      );
+    } else if (type === "tv") {
+      movieInfo = await basicFetch(
+        `/tv/${movieId}?language=en-US&api_key=${API_KEY}`
+      );
+    }
+    return movieInfo;
+  }
+
 };
+
+
+
+
+
+
 
 export default Tmdb;

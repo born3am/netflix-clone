@@ -11,3 +11,23 @@ body {
   background-color: #111;
   color: #fff;
 }
+
+.lists {
+  margin-top: -150px;
+}
+
+footer {
+  margin: 50px 0;
+  text-align: center;
+}
+
+footer p span a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p span a:hover {
+  color: #C3181F;
+  text-decoration: none;
+}
