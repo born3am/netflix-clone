@@ -16,7 +16,10 @@ export default function HighlightedMovie({ item }) {
         genres.push(item.genres[i].name);
     }
 
-
+    let description = item.overview;
+    if (description.length > 200) {
+        description = description.substring(0, 200) + '...';
+    }
 
 
     return (
@@ -33,7 +36,7 @@ export default function HighlightedMovie({ item }) {
                         <div className="highlighted--year"> {` ${shortMonth}-${firstDate.getFullYear()}`} </div>
                         <div className="highlighted--seasons"> {item.number_of_seasons} season{item.number_of_seasons !== 1 ? "s" : ""}  </div>
                     </div>
-                    <div className="highlighted--description"> {item.overview} </div>
+                    <div className="highlighted--description"> {description} </div>
                     <div className="highlighted--buttons">
                         <a href={`watch/${item.id} `} className="highlighted--watch-button" > &#x25b6; Watch</a>
                         <a href={`list/add/${item.id}`} className="highlighted--list-button" > + My List </a>

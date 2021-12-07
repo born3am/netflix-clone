@@ -15,14 +15,16 @@ export default function App() {
     const loadAll = async () => {
       // getting all the listStyle:
       let list = await Tmdb.getHomeList()
-      setMovieList(list)
 
       // getting highlighted movie:
       let originals = list.filter(i => i.slug === 'originals');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1))
       let chosen = originals[0].items.results[randomChosen];
-      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv')
+      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv')      
       setHighlightedData(chosenInfo)
+
+      setMovieList(list)
+
 
     }
 
@@ -62,7 +64,7 @@ export default function App() {
 
       <footer>
         <p>
-          developed by 
+          developed by
           <span>
             <a href="https://github.com/born3am"> born3am</a>
           </span> - 2021
@@ -84,7 +86,11 @@ export default function App() {
 
       </footer>
 
-
+          {movieList.length <= 0 &&
+      <div className="loading">
+        <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="loading" />
+      </div>
+      }
 
     </div >
   )
