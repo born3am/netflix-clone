@@ -1,16 +1,6 @@
 const API_KEY = "a3d5a62b2c8899a5ae80c328d3978630";
 const API_BASE = "https://api.themoviedb.org/3";
 
-/* lists to be fetched
-- recommended
-- top rated
-- action
-- comedy 
-- thriller 
-- drama 
-- documentary
-
-*/
 
 const basicFetch = async (endpoint) => {
   const req = await fetch(`${API_BASE}${endpoint}`);
