@@ -1,4 +1,4 @@
-const API_KEY = "a3d5a62b2c8899a5ae80c328d3978630";
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY; ;
 const API_BASE = "https://api.themoviedb.org/3";
 
 
