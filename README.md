@@ -17,10 +17,10 @@ I'm a frontend developer.
 
 ## Screenshots
 
-![App Screenshot]("./netflix-1.png")
+![App Screenshot](netflix-1.png)
 
-![App Screenshot]("./netflix-2.png")
+![App Screenshot](netflix-2.png)
 
-![App Screenshot]("./netflix-3.png")
+![App Screenshot](netflix-3.png)
 
 
