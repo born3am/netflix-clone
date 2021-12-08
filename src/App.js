@@ -67,7 +67,7 @@ export default function App() {
           developed by
           <span>
             <a href="https://github.com/born3am"> born3am</a>
-          </span> - Nov.2021
+          </span> - 2021
         </p>
 
         <p>
