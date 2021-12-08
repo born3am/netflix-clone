@@ -1,8 +1,8 @@
 {
-  "name": "netflix-multilingual",
+  "homepage": "https://github.com/born3am/netflix-clone",
+  "name": "netflix-clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "predeploy": "npm run -d build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -26,7 +26,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app", 
+      "react-app",
       "react-app/jest"
     ]
   },
@@ -41,5 +41,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "description": "This is a project exercise did during my web development course. The data source used was from TMDB API.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/born3am/netflix-multilingual.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/born3am/netflix-multilingual/issues"
   }
 }
