@@ -1,4 +1,5 @@
 import React from 'react'
+import userProfile from '../assets/img/user-profile-icon.svg'
 import './Header.css'
 
 export default function Header({black}) {
@@ -11,7 +12,7 @@ export default function Header({black}) {
             </div>
             <div className="header--user">
                 <a href="/">
-                    <img src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400x400.png" alt="user" />
+                    <img src={userProfile} alt='User Profile'></img>
                 </a>
             </div>
             
