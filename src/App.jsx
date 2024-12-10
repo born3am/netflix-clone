@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Tmdb from './Tmdb'
 import MovieRow from './components/MovieRow';
