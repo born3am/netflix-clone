@@ -14,7 +14,12 @@
   "license": "ISC",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "eslint -c eslint.config.js --cache .",
+    "lint:fix": "npm run lint -- --no-cache --fix",
+    "prettier": "prettier --check --cache --no-error-on-unmatched-pattern '**/*.md' '**/*.yml' '**/*.json' '**/*.html' '**/*.css' '**/*.scss' '**/*.sass' '**/*.less'",
+    "prettier:fix": "npm run prettier -- --no-cache --write",
+    "fix": "npm run prettier:fix ; npm run lint:fix"
   },
   "browserslist": {
     "production": [
@@ -38,6 +43,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@born3am/eslint-config": "^0.3.3",
+    "@born3am/prettier-config": "^1.0.1",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
