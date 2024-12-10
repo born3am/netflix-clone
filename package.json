@@ -3,30 +3,23 @@
   "name": "netflix-clone",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
-    "@mui/core": "^5.0.0-alpha.54",
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "gh-pages": "^3.2.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^1.1.2"
+  "description": "This is a project exercise did during my web development course. The data source used was from TMDB API.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/born3am/netflix-multilingual.git"
   },
-  "scripts": {
-    "predeploy": "npm run -d build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "author": "",
+  "license": "ISC",
+"scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c eslint.config.js --cache .",
+    "lint:fix": "npm run lint -- --no-cache --fix",
+    "prettier": "prettier --check --cache --no-error-on-unmatched-pattern '**/*.md' '**/*.yml' '**/*.json' '**/*.html' '**/*.css' '**/*.scss' '**/*.sass' '**/*.less'",
+    "prettier:fix": "npm run prettier -- --no-cache --write",
+    "fix": "npm run prettier:fix ; npm run lint:fix"
   },
   "browserslist": {
     "production": [
@@ -40,15 +33,18 @@
       "last 1 safari version"
     ]
   },
-  "description": "This is a project exercise did during my web development course. The data source used was from TMDB API.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/born3am/netflix-multilingual.git"
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "gh-pages": "^3.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/born3am/netflix-multilingual/issues"
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "vite": "^6.0.2",
+    "@vitejs/plugin-react": "^4.3.4"
   }
 }
