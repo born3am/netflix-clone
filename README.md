@@ -6,7 +6,6 @@ This is a project exercise did during my web development course. The data source
 
 const API_BASE = "https://api.themoviedb.org/3";
 
-
 ## Screenshots
 
 ![App Screenshot](netflix-1.png)
@@ -59,12 +58,15 @@ npm run build
 ```
 
 2.  Deploy the built project to GitHub Pages by running:
+
 ```sh
 npm run deploy
-  ```
+```
 
 ## Linting Instructions
+
 To run both Prettier and ESLint fixes together, run:
+
 ```sh
 npm run fix
 ```
